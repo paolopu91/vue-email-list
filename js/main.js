@@ -13,6 +13,7 @@ new Vue({
     el:"#demo",
     data:{
         emailRandom: null,
+        randomListEmail:[],
     },
 
     methods:{
@@ -27,7 +28,21 @@ new Vue({
                     this.emailRandom = axiosEmail.data.response
             });
         },
+
+        getTenEmailRandom(){
+            for(let i=0 ; i<10 ;i++){
+
+               axios
+                .get("https://flynn.boolean.careers/exercises/api/random/mail")
+                .then((arrEmail)=>{
+                    
+                    this.randomListEmail.push(arrEmail.data.response); 
+                   
+                }) 
+            };
+            
+        },
         
-    }
+    },
 });
 

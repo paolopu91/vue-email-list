@@ -16,13 +16,32 @@
 <body>
     <!-- div id with js -->
     <div id="demo">
-
-        
+        <!-- first example for randomEmail -->
         <div class="container">
-            <div>{{ emailRandom }}</div>
-            <button class="btn btn-primary" @click="getRandomEmail">Clicca qui</button>
+            <div class="container">
+                <span class="bg-success">
+                    {{emailRandom}}
+                </span>
+            </div>
+            <button class="btn btn-primary" @click="getRandomEmail">
+                Clicca qui
+
+            </button>
         </div>
 
+        <!-- exercise -->
+        <div class="container">
+            <div class="container">
+                <span class="bg-success">
+                    {{randomListEmail}}
+                </span>
+            </div>
+            <button class="btn btn-primary" @click="getTenEmailRandom">
+                Generate 10 Email
+            </button>
+
+        </div>
+        
 
 
 
